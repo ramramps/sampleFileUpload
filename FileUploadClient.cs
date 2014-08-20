@@ -75,6 +75,8 @@ public static async Task<HttpResponseMessage> FileUpload(String fileLocation, Do
                        formdata.Add(streamContent, "file");
                        
                        //send the document and document parameters to the server
+                       //you can use MultipartFormDataStreamProvider class to read the contents.This is in server side.
+                       
                        await client.PostAsync(url, formdata).ContinueWith(
                          t =>
                          {
