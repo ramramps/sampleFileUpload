@@ -20,6 +20,7 @@ public static async Task<HttpResponseMessage> FileUpload(String fileLocation, Do
 
                if (!AddToIndexedQueue)
                {
+                   //extension refers to a static class where I get the URL parameter from web config file                                                        
                    url = Extensions.GetConfigurationKey("WebDocumentURL") + "/api/Document/UnIndexedDocument/Add";
                }
 
